@@ -1,0 +1,33 @@
+Initialize engine version: 4.6.1f1 (d1db7a1b5196)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.5012]
+    Renderer: NVIDIA GeForce GTX 760
+    Vendor:   NVIDIA
+    VRAM:     1987 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Projects\UNITY\Marthas Memtris\PC Build\Memtris_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Projects\UNITY\Marthas Memtris\PC Build\Memtris_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Projects\UNITY\Marthas Memtris\PC Build\Memtris_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Projects\UNITY\Marthas Memtris\PC Build\Memtris_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Projects\UNITY\Marthas Memtris\PC Build\Memtris_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Projects\UNITY\Marthas Memtris\PC Build\Memtris_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.113 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1165 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: E:\Projects\UNITY\Marthas Memtris\PC Build\Memtris_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Projects\UNITY\Marthas Memtris\PC Build\Memtris_Data\Managed\System.dll (this message is harmless)
+UnloadTime: 9.319710 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 718.
+Total: 0.683258 ms (FindLiveObjects: 0.028103 ms CreateObjectMapping: 0.010245 ms MarkObjects: 0.195258 ms  DeleteObjects: 0.032787 ms)
+
+UnloadTime: 0.633784 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 494.
+Total: 0.519908 ms (FindLiveObjects: 0.009953 ms CreateObjectMapping: 0.009367 ms MarkObjects: 0.159251 ms  DeleteObjects: 0.029566 ms)
+

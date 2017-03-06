@@ -1,0 +1,15 @@
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\Assembly-CSharp-Editor.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\Assembly-CSharp-Editor.pdb
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\UnityEditor.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\UnityEditor.Graphs.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\UnityEditor.UI.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\UnityEngine.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\UnityEngine.UI.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\Mono.Cecil.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\nunit.framework.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\Unity.DataContract.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Projects\UNITY\Marthas Memtris\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\Projects\UNITY\Marthas Memtris\obj\Debug\Assembly-CSharp-Editor-vs.csprojResolveAssemblyReference.cache
+E:\Projects\UNITY\Marthas Memtris\obj\Debug\Assembly-CSharp-Editor.dll
+E:\Projects\UNITY\Marthas Memtris\obj\Debug\Assembly-CSharp-Editor.pdb
