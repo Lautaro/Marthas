@@ -70,7 +70,7 @@ public class ZombieBoyController : EnemyBase
 		{
 
 				base.FixedUpdate ();
-				var bounds = renderer.bounds;
+				var bounds = GetComponent<Renderer>().bounds;
 				Vector2 frontCheckPoint;
 					
 
@@ -128,7 +128,7 @@ public class ZombieBoyController : EnemyBase
 		/// </summary>
 		protected override void SetMovementSpeed ()
 		{	
-				if (!IsDead && PlatformScene.IsGameOn && !IsConfused && !IsHurt) {
+				if (!IsDead && PlatformScene.Me.IsGameOn && !IsConfused && !IsHurt) {
 						if (target.x > transform.position.x) {
 								movement = 1.0F;
 						} else if (target.x < transform.position.x) {
@@ -158,7 +158,7 @@ public class ZombieBoyController : EnemyBase
 				HitPoint --;
 		}		
 
-		void Die ()
+		public void Die ()
 		{
 				if (!IsDead) {			
 						IsDead = true;				
@@ -167,7 +167,7 @@ public class ZombieBoyController : EnemyBase
 						var deathEffect = GetComponentInChildren<ParticleSystem> ();
 						deathEffect.Play ();
 						animator.SetTrigger ("Dying");	
-						PlatformScene.ps.ZombiesKilled ++;
+						PlatformScene.Me.ZombiesKilled ++;
 						base.Die (2.5f);
 				}
 		}

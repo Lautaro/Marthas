@@ -15,10 +15,10 @@ public class EnemyBase : CharacterBase
 		protected override void Update ()
 		{
 				// Check Marthas position.
-				if (PlatformScene.Martha) {
+				if (PlatformScene.Me.Martha) {
 			
 				
-						target = PlatformScene.Martha.transform.position;
+						target = PlatformScene.Me.Martha.transform.position;
 				
 						base.Update ();	
 				}

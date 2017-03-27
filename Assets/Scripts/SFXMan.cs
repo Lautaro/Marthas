@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SFXMan : MonoBehaviour
 {
+ 
 		//	static public  SFXMan Me;
 		static public  AudioListener listener;
 		static public	AudioSource player; 
@@ -51,7 +52,7 @@ public class SFXMan : MonoBehaviour
 				}
 		}
 
-		static  float musicVolume = 1;
+		static  float musicVolume = 0;
 
 		public static float MusicVolume {
 				get {

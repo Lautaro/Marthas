@@ -143,9 +143,9 @@ public class Blip2D : MonoBehaviour
 
 		IEnumerator LerpSize (float targetSize, float durationSeconds)
 		{				
-				var alpha = renderer.material.color.a;
+				var alpha = GetComponent<Renderer>().material.color.a;
 				var t = Time.deltaTime;
-				var material = renderer.material;
+				var material = GetComponent<Renderer>().material;
 				var startScale = transform.localScale.x;	
 
 				while (t < durationSeconds) {

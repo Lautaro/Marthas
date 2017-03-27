@@ -23,10 +23,8 @@ public class Ico : MonoBehaviour
 		
 				Vector2 direction = thisPosition - impactPosition;
 		
-				rigidbody2D.AddForceAtPosition (direction.normalized * force, impactPosition);
+				GetComponent<Rigidbody2D>().AddForceAtPosition (direction.normalized * force, impactPosition);
 				//	rigidbody2D.AddForce (direction.normalized * 1000);
 		
-		}
-
-		
+		}		
 }

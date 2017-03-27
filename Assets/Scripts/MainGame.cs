@@ -1,99 +1,93 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MainGame : MonoBehaviour
 {
-		public static int Wave = 1;
-		public static MainGameState state;
-		UISlider musicVolumeSlider; 
-		UISlider sfxVolumeSlider; 
-		GameObject logo;
+    
+    public static MainGameState state;
+    Slider musicVolumeSlider;
+    Slider sfxVolumeSlider;
+    GameObject logo;
 
 
-        #region Main Menu User Interface
+    #region Main Menu User Interface
 
-        public GameObject InstructionsPanel;
-        public GameObject OptionsPanel;
-        #endregion
+    public GameObject InstructionsPanel;
+    public GameObject OptionsPanel;
+    #endregion
 
-        // Use this for initialization
-		void Start ()
-		{
-            InstructionsPanel = transform.FindChild("Instructions").gameObject;
-            OptionsPanel = transform.FindChild("Options").gameObject;
+    // Use this for initialization
+    void Start()
+    {
+        InstructionsPanel = transform.FindChild("Instructions").gameObject;
+        OptionsPanel = transform.FindChild("Options").gameObject;
 
-            
-				state = MainGameState.StartMenu;
-				Wave = 1; 
+        state = MainGameState.StartMenu;
+      
+        SFXMan.PlayAsSong(SFXMan.sng_StartMenuSong);
 
-				SFXMan.PlayAsSong (SFXMan.sng_StartMenuSong);
+        logo = transform.Find("Logo").gameObject;
+        musicVolumeSlider = transform.Find("Options/MusicVolume").GetComponent<Slider>();
+        sfxVolumeSlider = transform.Find("Options/SfxVolume").GetComponent<Slider>();
 
-				logo = transform.Find ("Logo").gameObject;
-				musicVolumeSlider = transform.Find ("Options/MusicVolume").GetComponent<UISlider> ();
-				sfxVolumeSlider = transform.Find ("Options/SfxVolume").GetComponent<UISlider> ();
+    }
 
+    public void StartGame()
+    {
+        StartCoroutine(InitiateGame());
+    }
 
-		}
+    IEnumerator InitiateGame()
+    {
+     
+        state = MainGameState.PlatformGame;
 
-		public void StartGame ()
-		{
-				StartCoroutine (InitiateGame ());
-		}
+        SFXMan.sfx_StartGame.Play();
+        AnimateLogo();
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("PlatformScene");
+    }
 
-		IEnumerator InitiateGame ()
-		{
-				Wave = 1; 
-				state = MainGameState.PlatformGame;
-				
-				SFXMan.sfx_StartGame.Play ();
-				AnimateLogo ();
-				yield return new WaitForSeconds (3);
-				Application.LoadLevel ("PlatformScene");
-		}
+    void AnimateLogo()
+    {
+        //var tween = logo.GetComponent<TweenScale> ();
+        //tween.style = UITweener.Style.Once;
+        //tween.to = new Vector3 (0.0f, 0.0f, 0.0f);
+        //tween.duration = 3;
+        //tween.PlayForward ();
 
-		void AnimateLogo ()
-		{
-				var tween = logo.GetComponent<TweenScale> ();
-				tween.style = UITweener.Style.Once;
-				tween.to = new Vector3 (0.0f, 0.0f, 0.0f);
-				tween.duration = 3;
-				tween.PlayForward ();
+    }
 
-		}
+    public void SetMusicVolume()
+    {
+        SFXMan.MusicVolume = musicVolumeSlider.value;
+    }
 
-		public void SetMusicVolume ()
-		{
-				SFXMan.MusicVolume = musicVolumeSlider.value;					
-		}
+    public void SetSfxVolume()
+    {
+        SFXMan.SfxVolume = sfxVolumeSlider.value;
+    }
 
-		public void SetSfxVolume ()
-		{
-				SFXMan.SfxVolume = sfxVolumeSlider.value;				
-		}
+    public void ToggleOptionsPanel()
+    {
+        OptionsPanel.SetActive(true);
+        InstructionsPanel.SetActive(false);
+    }
 
-        public void ToggleOptionsPanel()
-        {
-         
-                OptionsPanel.SetActive(true);
-                InstructionsPanel.SetActive(false);
-         
-        }
-
-        public void ToggleInstructionsPanel()
-        {   
-                OptionsPanel.SetActive(false);
-                InstructionsPanel.SetActive(true);
-         
-        }
-
-
+    public void ToggleInstructionsPanel()
+    {
+        OptionsPanel.SetActive(false);
+        InstructionsPanel.SetActive(true);
+    }
 }
 
 public enum MainGameState
 {
-		StartMenu, 
-		PlatformGame, 
-		CardGame
+    StartMenu,
+    PlatformGame,
+    CardGame
 }
 
 
